@@ -30,3 +30,14 @@ Number of Executors: 200
 Cores per Executor: 4
 Memory per Executor: 2 GB
 Total Memory: 400 GB
+
+<pre><code>
+spark.executor.instances = 200                 # Number of executors
+spark.executor.cores = 4                        # Cores per executor
+spark.executor.memory = 2g                      # Memory per executor (2 GB)
+spark.driver.memory = 2g                        # Memory for the driver (can be adjusted based on need)
+spark.memory.fraction = 0.6                     # Fraction of heap space used for execution and storage
+spark.memory.storageFraction = 0.5              # Fraction of memory reserved for storage
+spark.default.parallelism = 800                 # Default parallelism (should be at least equal to number of partitions)
+spark.sql.shuffle.partitions = 800              # Number of partitions to use when shuffling data
+</code></pre>
